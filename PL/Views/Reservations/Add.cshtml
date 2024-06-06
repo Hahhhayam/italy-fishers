@@ -1,0 +1,21 @@
+﻿@model DAL.Entity.Reservation
+@{
+}
+
+<h2>Додати</h2>
+
+<form asp-controller="Reservations" asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="person_id">ID Рибалки</label>
+        <input asp-for="person_id" class="form-control" />
+        <label asp-for="watersource_id">ID Рибацього місця</label>
+        <input asp-for="watersource_id" class="form-control" />
+        <label asp-for="status_id">Статус</label>
+        <input asp-for="status_id" class="form-control" />
+        <label asp-for="start">Старт</label>
+        <input asp-for="start" class="form-control" type="datetime-local">
+        <label asp-for="end">Кінець</label>
+        <input asp-for="end" class="form-control" type="datetime-local"/>
+    </div>
+    <button type="submit" id="submitLocationBtn" class="btn btn-submitLocation">Додати</button>
+</form>

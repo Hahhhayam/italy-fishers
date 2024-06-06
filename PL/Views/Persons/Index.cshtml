@@ -1,0 +1,32 @@
+﻿@model IEnumerable<DAL.Entity.Person>
+
+@{
+}
+
+<div>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Ім`я</th>
+            <th>По-батькові</th>
+            <th>Прізвисько</th>
+            <th>Паспорт</th>
+            <th>Дія</th>
+        </tr>
+        @foreach (var person in Model) 
+        {
+            <tr>
+                <td>@person.id</td>
+                <td>@person.first_name</td>
+                <td>@person.middle_name</td>
+                <td>@person.last_name</td>
+                <td>@person.passport_id</td>
+                <td>
+                    <a asp-area="" asp-controller="Persons" asp-action="Modify" asp-route-id=@person.id>Редагувати</a> |
+                    <a asp-area="" asp-controller="Persons" asp-action="Delete" asp-route-id=@person.id>Видалити</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<a asp-area="" asp-controller="Persons" asp-action="Add">Додати</a>

@@ -1,0 +1,13 @@
+﻿@model DAL.Entity.Status
+@{
+}
+
+<h2>Додати</h2>
+
+<form asp-controller="Statuses" asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="caption">Текст</label>
+        <input asp-for="caption" class="form-control" />
+    </div>
+    <button type="submit" id="submitLocationBtn" class="btn btn-submitLocation">Додати</button>
+</form>

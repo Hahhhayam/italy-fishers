@@ -1,0 +1,19 @@
+﻿@model DAL.Entity.Person
+@{
+}
+
+<h2>Додати</h2>
+
+<form asp-controller="Persons" asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="first_name">Ім'я</label>
+        <input asp-for="first_name" class="form-control" />
+        <label asp-for="middle_name">По-батькові</label>
+        <input asp-for="middle_name" class="form-control" />
+        <label asp-for="last_name">Прізвисько</label>
+        <input asp-for="last_name" class="form-control" />
+        <label asp-for="passport_id">Паспорт</label>
+        <input asp-for="passport_id" class="form-control" />
+    </div>
+    <button type="submit" id="submitLocationBtn" class="btn btn-submitLocation">Додати</button>
+</form>

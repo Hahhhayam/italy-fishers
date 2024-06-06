@@ -1,0 +1,13 @@
+﻿@model DAL.Entity.WatersourceType
+@{
+}
+
+<h2>Додати</h2>
+
+<form asp-controller="WatersourceTypes" asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="name">Назва</label>
+        <input asp-for="name" class="form-control" />
+    </div>
+    <button type="submit" id="submitLocationBtn" class="btn btn-submitLocation">Додати</button>
+</form>

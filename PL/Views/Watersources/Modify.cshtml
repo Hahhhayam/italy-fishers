@@ -1,0 +1,19 @@
+﻿@model DAL.Entity.Watersource
+
+@{
+}
+
+<h2>Відредагувати</h2>
+
+<form asp-controller="Watersources" asp-action="Update" method="post">
+    <div class="form-group">
+        <label asp-for="name">Назва</label>
+        <input asp-for="name" class="form-control" />
+        <label asp-for="type_id">ID типу</label>
+        <input asp-for="type_id" class="form-control" />
+        <label asp-for="adress">Aдреса</label>
+        <input asp-for="adress" class="form-control" />
+    </div>
+    <button type="submit" id="submitLocationBtn" class="btn btn-submitLocation">Додати</button>
+    <input asp-for="id" type="hidden" />
+</form>
